@@ -1,0 +1,6 @@
+<p>Develhope Shop</p>
+<div *ngFor="let product of products; let i = index">
+  <app-shop-list [product]="products[i]" (selected)="selectProduct($event)" ></app-shop-list>
+</div>
+
+<app-shop-detail [product]="selectedProduct"></app-shop-detail>

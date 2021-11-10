@@ -1,0 +1,21 @@
+<div *ngIf="product.open">
+  <p>Dettagli prodotto</p>
+  <div class="container-1">
+    <img src="{{product.img}}">
+    <div>
+      <h1 style="font-weight: bold;">{{product.title}}</h1>
+      <p>Anno di uscita: {{product.exitYear}}</p>
+      <p>Altezza: {{product.productHeight}}</p>
+      <p>Peso: {{product.productWeight}}</p>
+      <p>Pezzi di prodotti: {{product.itemsProduced}}</p>
+    </div>
+  </div>
+  <div>
+    <p>{{product.description}}</p>
+    <p style="font-weight: bold;">Prezzo: {{product.price}}€</p>
+    <div>
+      <button>Acquista</button>
+      <button (click)="closeProduct">Chiudi</button>
+    </div>
+  </div>
+</div>
