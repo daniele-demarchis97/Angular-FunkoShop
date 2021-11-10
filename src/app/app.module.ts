@@ -11,7 +11,7 @@ import { ShopDetailComponent } from './core/shop-container/components/shop-detai
     AppComponent,
     ShopContainerComponent,
     ShopListComponent,
-    ShopDetailComponent
+    ShopDetailComponent,
   ],
   imports: [
     BrowserModule

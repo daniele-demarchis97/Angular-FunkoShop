@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/shared/models/Product';
 
 @Component({
@@ -9,14 +9,20 @@ import { Product } from 'src/app/shared/models/Product';
 export class ShopDetailComponent implements OnInit {
 
   @Input() product!: Product;
+  @Output() closed = new EventEmitter<Product>();
+  @Output() bought = new EventEmitter<Product>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
-  closeProduct(product: Product) {
-    product.open = false;
+  close(product: Product) {
+    this.closed.emit(product);
   }
+
+  buy(product: Product) {
+    this.bought.emit(product);
+  }
+
 }

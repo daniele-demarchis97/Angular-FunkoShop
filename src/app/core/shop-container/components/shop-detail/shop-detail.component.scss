@@ -1,3 +1,32 @@
-.container-1 {
-  display: flex;
+.detail-container {
+  border: 2px solid black;
+  box-shadow: 3px 3px 3px gray;
+  padding: 10rem;
+
+  .container-1 {
+    display: flex;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .buy-button {
+    background-color: #F6B34E;
+    border: #F6B34E;
+    border-radius: 25px;
+    padding: 1rem 4rem;
+  }
+
+  .close-button {
+    background-color: #E43939;
+    border: #E43939;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+  }
 }
+
+
+
+

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/shared/models/Product';
+import { Cart } from 'src/app/shared/models/Cart';
 
 @Component({
   selector: 'app-shop-container',
@@ -9,6 +10,10 @@ import { Product } from 'src/app/shared/models/Product';
 export class ShopContainerComponent implements OnInit {
 
   selectedProduct!: Product;
+  cart: Cart = {
+    numItems: 0,
+    price: 0
+  };
 
   products: Product[] = [
     {
@@ -20,7 +25,8 @@ export class ShopContainerComponent implements OnInit {
       exitYear: 2010,
       productHeight: 140,
       productWeight: 200,
-      itemsProduced: 10000
+      itemsProduced: 10000,
+      open: false
     },
     {
       id: 2,
@@ -31,7 +37,8 @@ export class ShopContainerComponent implements OnInit {
       exitYear: 2015,
       productHeight: 140,
       productWeight: 250,
-      itemsProduced: 8000
+      itemsProduced: 8000,
+      open: false
     },
     {
       id: 3,
@@ -42,7 +49,8 @@ export class ShopContainerComponent implements OnInit {
       exitYear: 2021,
       productHeight: 140,
       productWeight: 280,
-      itemsProduced: 1000
+      itemsProduced: 1000,
+      open: false
     }
   ];
 
@@ -52,7 +60,16 @@ export class ShopContainerComponent implements OnInit {
   }
 
   selectProduct(product: Product) {
+    product.open = true;
     this.selectedProduct = product;
   }
 
+  closeProduct(product: Product) {
+    product.open = false;
+  }
+
+  buyProduct(product: Product) {
+    this.cart.numItems++;
+    this.cart.price += product.price;
+  }
 }

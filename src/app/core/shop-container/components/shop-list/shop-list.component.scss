@@ -1,11 +1,12 @@
 div {
-  border: solid 1px black;
-  display: flex;
+  border: 2px solid black;
+  box-shadow: 3px 3px 3px gray;
+  margin-bottom: 1rem;
 
   button {
     color: white;
-    border: orange;
+    background-color: #F6B34E;
+    border: #F6B34E;
     border-radius: 25px;
   }
 }
-

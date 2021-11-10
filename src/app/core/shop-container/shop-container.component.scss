@@ -1,0 +1,19 @@
+.main-container {
+  display: flex;
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25%;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+button {
+  background-color: #3F5AB9;
+  border: #3F5AB9;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
