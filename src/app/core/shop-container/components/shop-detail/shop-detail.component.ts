@@ -17,11 +17,11 @@ export class ShopDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  close(product: Product) {
+  close(product: Product): void {
     this.closed.emit(product);
   }
 
-  buy(product: Product) {
+  buy(product: Product): void {
     this.bought.emit(product);
   }
 

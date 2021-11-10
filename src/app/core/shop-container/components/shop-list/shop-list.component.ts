@@ -17,7 +17,7 @@ export class ShopListComponent implements OnInit {
   }
 
 
-  select(product: Product) {
+  select(product: Product): void {
     this.selected.emit(product);
   }
 }

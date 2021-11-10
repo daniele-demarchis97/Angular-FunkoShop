@@ -1,15 +1,19 @@
 .detail-container {
   border: 2px solid black;
   box-shadow: 3px 3px 3px gray;
-  padding: 10rem;
+  padding: 4rem;
 
-  .container-1 {
+  .container-info {
     display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+
   }
 
   .button-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 4rem;
   }
 
   .buy-button {
@@ -23,8 +27,9 @@
     background-color: #E43939;
     border: #E43939;
     border-radius: 25px;
-    padding: 1rem 2rem;
+    padding: .5rem 2rem;
   }
+
 }
 
 

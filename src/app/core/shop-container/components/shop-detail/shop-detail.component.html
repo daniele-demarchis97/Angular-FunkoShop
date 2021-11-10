@@ -6,9 +6,9 @@
 
 <ng-template #detail>
   <div *ngIf="product.open">
-    <p>Dettagli prodotto</p>
+    <p style="font-size: 30px;">Dettagli prodotto</p>
     <div class="detail-container">
-      <div class="container-1">
+      <div class="container-info">
         <img src="{{product.img}}" height="300">
         <div>
           <h1 style="font-weight: bold;">{{product.title}}</h1>
@@ -16,14 +16,19 @@
           <p>Altezza: {{product.productHeight}}</p>
           <p>Peso: {{product.productWeight}}</p>
           <p>Pezzi di prodotti: {{product.itemsProduced}}</p>
+          <p class="io" [ngStyle]="{'background-color': product.availability > 0 ? 'green' : 'red'}">Disponibilità: {{product.availability}}</p>
         </div>
       </div>
       <div>
         <p>{{product.description}}</p>
         <p style="font-weight: bold;">Prezzo: {{product.price}}€</p>
         <div class="button-container">
-          <button class="buy-button" (click)="buy(product)">Acquista</button>
-          <button class="close-button" (click)="close(product)">Chiudi</button>
+          <div>
+            <button class="buy-button" (click)="buy(product)">Acquista</button>
+          </div>
+          <div>
+            <button class="close-button" (click)="close(product)">Chiudi</button>
+          </div>
         </div>
       </div>
     </div>

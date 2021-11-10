@@ -9,4 +9,5 @@ export interface Product {
   productWeight: number;
   itemsProduced: number;
   open: boolean;
+  availability: number;
 }

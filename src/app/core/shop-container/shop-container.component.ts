@@ -26,7 +26,8 @@ export class ShopContainerComponent implements OnInit {
       productHeight: 140,
       productWeight: 200,
       itemsProduced: 10000,
-      open: false
+      open: false,
+      availability: 45
     },
     {
       id: 2,
@@ -38,7 +39,8 @@ export class ShopContainerComponent implements OnInit {
       productHeight: 140,
       productWeight: 250,
       itemsProduced: 8000,
-      open: false
+      open: false,
+      availability: 23
     },
     {
       id: 3,
@@ -50,7 +52,8 @@ export class ShopContainerComponent implements OnInit {
       productHeight: 140,
       productWeight: 280,
       itemsProduced: 1000,
-      open: false
+      open: false,
+      availability: 0
     }
   ];
 
@@ -59,17 +62,26 @@ export class ShopContainerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectProduct(product: Product) {
+  selectProduct(product: Product): void {
     product.open = true;
     this.selectedProduct = product;
   }
 
-  closeProduct(product: Product) {
+  closeProduct(product: Product): void {
     product.open = false;
   }
 
-  buyProduct(product: Product) {
-    this.cart.numItems++;
-    this.cart.price += product.price;
+  buyProduct(product: Product): void {
+    if (product.availability > 0) {
+      this.cart.numItems++;
+      this.cart.price += product.price;
+      product.availability--;
+    }
+
+  }
+
+  empyCart(): void {      //aggiungere reset availability
+    this.cart.numItems = 0;
+    this.cart.price = 0;
   }
 }
