@@ -16,7 +16,7 @@
           <p>Altezza: {{product.productHeight}}</p>
           <p>Peso: {{product.productWeight}}</p>
           <p>Pezzi di prodotti: {{product.itemsProduced}}</p>
-          <p class="io" [ngStyle]="{'background-color': product.availability > 0 ? 'green' : 'red'}">Disponibilità: {{product.availability}}</p>
+          <p [ngStyle]="{'background-color': product.availability > 0 ? 'green' : 'red'}">Disponibilità: {{product.availability}}</p>
         </div>
       </div>
       <div>
