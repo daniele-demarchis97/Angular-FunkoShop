@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Cart } from 'src/app/shared/models/Cart';
 import { Product } from 'src/app/shared/models/Product';
 
 @Component({
@@ -10,7 +9,6 @@ import { Product } from 'src/app/shared/models/Product';
 export class ShopCartComponent implements OnInit {
 
   @Input() product!: Product;
-  @Input() cart!: Cart;
 
   constructor() { }
 

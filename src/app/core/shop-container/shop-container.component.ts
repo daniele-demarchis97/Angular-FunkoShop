@@ -59,7 +59,7 @@ export class ShopContainerComponent implements OnInit {
       open: false,
       quantityCart: 0,
       priceCart: 0,
-      availability: 0
+      availability: 3
     }
   ];
 
@@ -85,19 +85,20 @@ export class ShopContainerComponent implements OnInit {
       product.quantityCart++;
       product.priceCart += product.price;
     }
-
   }
 
-  emptyCart(event: Cart): void {      //fix reset availability  (parametro corretto??)
+  emptyCart(event: Cart): void {      //fix reset availability  (parametro corretto??)  , inoltre aggiunger possibilità rimuovere singolo oggetto
     this.products[0].availability = 45;
     this.products[1].availability = 23;
+    this.products[2].availability = 3;
     this.cart.numItems = 0,
     this.cart.price = 0;
-  }
-
-  emptyCartYolo(product: Product): void {
-    product.quantityCart = 0;
-    product.priceCart = 0;
+    this.products[0].quantityCart = 0;
+    this.products[0].priceCart = 0;
+    this.products[1].quantityCart = 0;
+    this.products[1].priceCart = 0;
+    this.products[2].quantityCart = 0;
+    this.products[2].priceCart = 0;
   }
 
 }

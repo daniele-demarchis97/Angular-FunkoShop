@@ -2,11 +2,11 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/shared/models/Product';
 
 @Component({
-  selector: 'app-shop-list',
-  templateUrl: './shop-list.component.html',
-  styleUrls: ['./shop-list.component.scss']
+  selector: 'app-shop-card',
+  templateUrl: './shop-card.component.html',
+  styleUrls: ['./shop-card.component.scss']
 })
-export class ShopListComponent implements OnInit {
+export class ShopCardComponent implements OnInit {
 
   @Input() product!: Product;
   @Output() selected = new EventEmitter<Product>();
@@ -16,8 +16,8 @@ export class ShopListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   select(product: Product): void {
     this.selected.emit(product);
   }
+
 }
