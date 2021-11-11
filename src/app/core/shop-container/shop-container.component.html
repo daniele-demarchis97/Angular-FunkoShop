@@ -1,15 +1,12 @@
+<app-nav-bar [cart]="cart" (empty)="emptyCart($event)" (ahah)="emptyCartYolo($event)" ></app-nav-bar>
 <div class="main-container">
   <div class="cards-container">
-    <p>Develhope Shop</p>
     <div *ngFor="let product of products; let i = index">
       <app-shop-list [product]="products[i]" (selected)="selectProduct($event)"></app-shop-list>
     </div>
   </div>
-  <div class="feature-container">
-    <div class="buttons">
-      <button class="cart">Carrello ({{ cart.numItems }})  {{cart.price}}€</button>
-      <button class="empty" (click)="empyCart()">Svuota carrello</button>
-    </div>
-    <app-shop-detail [product]="selectedProduct" (closed)="closeProduct($event)" (bought)="buyProduct($event)"></app-shop-detail>
+  <app-shop-detail class="detail-container" [product]="selectedProduct" (closed)="closeProduct($event)" (bought)="buyProduct($event)"></app-shop-detail>
+  <div *ngFor="let product of products; let i = index">
+    <app-shop-cart [cart]="cart" [product]="products[i]"></app-shop-cart>
   </div>
 </div>

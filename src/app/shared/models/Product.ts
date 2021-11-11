@@ -9,5 +9,7 @@ export interface Product {
   productWeight: number;
   itemsProduced: number;
   open: boolean;
+  quantityCart: number;
+  priceCart: number;
   availability: number;
 }
