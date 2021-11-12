@@ -11,9 +11,7 @@ export const PRODUCTS: Product[] = [
     productHeight: 140,
     productWeight: 200,
     itemsProduced: 10000,
-    open: false,
     quantityCart: 0,
-    priceCart: 0,
     availability: 45
   },
   {
@@ -26,9 +24,7 @@ export const PRODUCTS: Product[] = [
     productHeight: 140,
     productWeight: 250,
     itemsProduced: 8000,
-    open: false,
     quantityCart: 0,
-    priceCart: 0,
     availability: 23
   },
   {
@@ -41,9 +37,7 @@ export const PRODUCTS: Product[] = [
     productHeight: 140,
     productWeight: 280,
     itemsProduced: 1000,
-    open: false,
     quantityCart: 0,
-    priceCart: 0,
     availability: 3
   }
 ];

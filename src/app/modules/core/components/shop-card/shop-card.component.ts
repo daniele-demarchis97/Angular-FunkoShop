@@ -9,15 +9,11 @@ import { Product } from 'src/app/shared/models/Product';
 export class ShopCardComponent implements OnInit {
 
   @Input() product!: Product;
-  @Output() selected = new EventEmitter<Product>();
+  @Output() selectProduct = new EventEmitter<Product>();
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  select(product: Product): void {
-    this.selected.emit(product);
   }
 
 }

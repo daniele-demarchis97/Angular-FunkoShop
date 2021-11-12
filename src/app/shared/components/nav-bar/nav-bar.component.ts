@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Cart } from '../../models/Cart';
+import { Product } from '../../models/Product';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,18 +8,13 @@ import { Cart } from '../../models/Cart';
 })
 export class NavBarComponent implements OnInit {
 
-  @Input() cart: Cart = {
-    numItems: 0,
-    price: 0
-  };
+  @Input() cart: Product[] = [];
 
-  @Output() empty = new EventEmitter<Cart>();
+  /*  @Output() emptyCart = new EventEmitter<Product>(); */
+
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  emptyCart(): void {
-    this.empty.emit(this.cart);
   }
 
 }

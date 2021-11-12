@@ -1,6 +1,6 @@
 <div>
-  <img src="{{ product.img }}" height="160">
+  <img [src]="product.img" height="160">
   <strong><p>{{ product.title }}</p></strong>
-  <p>{{ product.price }}€</p>
-  <button (click)="select(product)">Mostra dettagli</button>
+  <p>{{ product.price | currency: "EUR"}}</p>
+  <button (click)="selectProduct.emit(product)">Mostra dettagli</button>
 </div>

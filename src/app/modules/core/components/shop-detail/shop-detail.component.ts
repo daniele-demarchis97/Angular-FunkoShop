@@ -9,20 +9,12 @@ import { Product } from 'src/app/shared/models/Product';
 export class ShopDetailComponent implements OnInit {
 
   @Input() product!: Product;
-  @Output() closed = new EventEmitter<Product>();
-  @Output() bought = new EventEmitter<Product>();
+  @Output() closeProduct = new EventEmitter<boolean>();
+  @Output() buyProduct = new EventEmitter<Product>();
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  close(product: Product): void {
-    this.closed.emit(product);
-  }
-
-  buy(product: Product): void {
-    this.bought.emit(product);
   }
 
 }

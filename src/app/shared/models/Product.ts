@@ -10,8 +10,6 @@ export interface Product {
   productHeight: number;
   productWeight: number;
   itemsProduced: number;
-  open: boolean;
   quantityCart: number;
-  priceCart: number;
   availability: number;
 }

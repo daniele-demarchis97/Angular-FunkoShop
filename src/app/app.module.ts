@@ -7,6 +7,7 @@ import { ShopCardComponent } from './modules/core/components/shop-card/shop-card
 import { ShopDetailComponent } from './modules/core/components/shop-detail/shop-detail.component';
 import { NavBarComponent } from './shared/components/nav-bar/nav-bar.component';
 import { ShopCartComponent } from './modules/core/components/shop-cart/shop-cart.component';
+import { ShopListComponent } from './modules/core/components/shop-list/shop-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ShopCartComponent } from './modules/core/components/shop-cart/shop-cart
     ShopDetailComponent,
     NavBarComponent,
     ShopCartComponent,
+    ShopListComponent,
   ],
   imports: [
     BrowserModule

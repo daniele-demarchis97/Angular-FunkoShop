@@ -1,15 +1,23 @@
-<app-nav-bar [cart]="cart" (empty)="emptyCart($event)"></app-nav-bar>
+<app-nav-bar ></app-nav-bar>
 <div class="main-container">
   <div class="cards-container">
-    <div *ngFor="let product of products">
-      <app-shop-card [product]="product" (selected)="selectProduct($event)"></app-shop-card>
-    </div>
+    <app-shop-list [products]="products" (selectProduct)="selectProduct($event)"></app-shop-list>
   </div>
-  <app-shop-detail class="detail-container" [product]="selectedProduct" (closed)="closeProduct($event)"
-    (bought)="buyProduct($event)"></app-shop-detail>
-  <div class="cart-container">
+  <div class="detail-container">
+    <div *ngIf="hide; else detail">
+      <p>Benvenuti nello shop di</p>
+      <img src="https://www.develhope.co/_nuxt/img/cav_black.9dc2b13.svg" height="100">
+      <p>Clicca su dettagli del visualizzare tutte le informazioni</p>
+    </div>
+    <ng-template #detail>
+      <app-shop-detail [product]="product" (closeProduct)="closeProduct($event)" (buyProduct)="buyProduct($event)">
+      </app-shop-detail>
+    </ng-template>
+  </div>
+
+ <!--  <div class="cart-container">
     <div *ngFor="let product of products">
       <app-shop-cart [product]="product"></app-shop-cart>
     </div>
   </div>
-</div>
+</div> -->
