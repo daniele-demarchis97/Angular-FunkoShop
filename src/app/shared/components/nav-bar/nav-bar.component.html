@@ -1,7 +1,7 @@
 <div class="nav-container">
   <p>Develhope Shop</p>
-  <div>
-    <button class="cart">Carrello ({{ cart?.length }})</button>
-    <button class="empty" >Svuota carrello</button>
+  <div >
+    <button class="cart">Carrello ({{ cart.length }}) - {{ totalCart | currency: "EUR" }}</button>
+    <button class="empty" (click)="emptyCart.emit(cart)">Svuota carrello</button>
   </div>
 </div>

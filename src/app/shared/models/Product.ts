@@ -12,4 +12,5 @@ export interface Product {
   itemsProduced: number;
   quantityCart: number;
   availability: number;
+  priceCart: number;
 }

@@ -8,8 +8,7 @@ import { Product } from 'src/app/shared/models/Product';
 })
 export class ShopCartComponent implements OnInit {
 
- /*  @Input() product!: Product;
-  @Input() cart; */
+  @Input() product!: Product;
 
   constructor() { }
 

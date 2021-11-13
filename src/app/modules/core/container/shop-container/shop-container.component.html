@@ -1,4 +1,4 @@
-<app-nav-bar ></app-nav-bar>
+<app-nav-bar [cart]="cart" [totalCart]="totalCart" (emptyCart)="emptyCart($event, products, productsReset)"></app-nav-bar>
 <div class="main-container">
   <div class="cards-container">
     <app-shop-list [products]="products" (selectProduct)="selectProduct($event)"></app-shop-list>
@@ -14,10 +14,9 @@
       </app-shop-detail>
     </ng-template>
   </div>
-
- <!--  <div class="cart-container">
+  <div class="cart-container">
     <div *ngFor="let product of products">
       <app-shop-cart [product]="product"></app-shop-cart>
     </div>
   </div>
-</div> -->
+</div>

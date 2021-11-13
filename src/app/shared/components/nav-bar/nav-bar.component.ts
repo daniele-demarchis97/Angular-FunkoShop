@@ -8,9 +8,10 @@ import { Product } from '../../models/Product';
 })
 export class NavBarComponent implements OnInit {
 
-  @Input() cart: Product[] = [];
-
-  /*  @Output() emptyCart = new EventEmitter<Product>(); */
+  @Input() cart!: Product[];
+  @Input() totalCart!: number;
+  @Input() productReset!: Product;
+  @Output() emptyCart = new EventEmitter<Product[]>();
 
   constructor() { }
 

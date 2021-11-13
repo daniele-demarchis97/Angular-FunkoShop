@@ -12,7 +12,8 @@ export const PRODUCTS: Product[] = [
     productWeight: 200,
     itemsProduced: 10000,
     quantityCart: 0,
-    availability: 45
+    availability: 45,
+    priceCart: 0
   },
   {
     id: 2,
@@ -25,7 +26,8 @@ export const PRODUCTS: Product[] = [
     productWeight: 250,
     itemsProduced: 8000,
     quantityCart: 0,
-    availability: 23
+    availability: 23,
+    priceCart: 0
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ export const PRODUCTS: Product[] = [
     productWeight: 280,
     itemsProduced: 1000,
     quantityCart: 0,
-    availability: 3
+    availability: 3,
+    priceCart: 0
   }
 ];
