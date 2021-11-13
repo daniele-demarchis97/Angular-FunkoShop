@@ -1,7 +1,7 @@
 <div>
   <strong><p>Dettagli prodotto</p></strong>
-  <div class="detail-container">
-    <div class="container-info">
+  <div class="detail-container p-5">
+    <div class="d-flex justify-content-start">
       <img [src]="product.img" height="300">
       <div>
         <h1 style="font-weight: bold;">{{product.title}}</h1>
@@ -16,7 +16,7 @@
     <div>
       <p>{{product.description}}</p>
       <p style="font-weight: bold;">Prezzo: {{product.price | currency: "EUR"}}</p>
-      <div class="button-container">
+      <div class="d-flex justify-content-between mt-5">
         <div>
           <button class="buy-button" (click)="buyProduct.emit(product)">Acquista</button>
         </div>

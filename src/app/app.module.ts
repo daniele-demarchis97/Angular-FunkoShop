@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { ShopContainerComponent } from './modules/core/container/shop-container/shop-container.component';
 import { ShopCardComponent } from './modules/core/components/shop-card/shop-card.component';
 import { ShopDetailComponent } from './modules/core/components/shop-detail/shop-detail.component';
-import { NavBarComponent } from './shared/components/nav-bar/nav-bar.component';
+import { NgbdNavBarComponent } from './shared/components/nav-bar/nav-bar.component';
 import { ShopCartComponent } from './modules/core/components/shop-cart/shop-cart.component';
 import { ShopListComponent } from './modules/core/components/shop-list/shop-list.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,13 @@ import { ShopListComponent } from './modules/core/components/shop-list/shop-list
     ShopContainerComponent,
     ShopCardComponent,
     ShopDetailComponent,
-    NavBarComponent,
+    NgbdNavBarComponent,
     ShopCartComponent,
     ShopListComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

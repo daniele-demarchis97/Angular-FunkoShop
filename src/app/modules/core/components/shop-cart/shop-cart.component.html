@@ -1,6 +1,8 @@
-<div *ngIf="product.quantityCart > 0">
-  <img [src]="product.img" height="50">
-  <p>{{product.title}}</p>
+<div *ngIf="product.quantityCart > 0" class="d-flex justify-content-between align-items-center m-2 card-cart">
+  <div class="d-flex">
+    <img [src]="product.img" height="50">
+    <p>{{product.title}}</p>
+  </div>
   <p> Quantita:{{product.quantityCart}} - {{product.priceCart | currency: "EUR"}}</p>
 </div>
 

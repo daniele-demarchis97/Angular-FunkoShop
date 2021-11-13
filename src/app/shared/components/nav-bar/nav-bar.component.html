@@ -1,7 +1,18 @@
-<div class="nav-container">
-  <p>Develhope Shop</p>
-  <div >
-    <button class="cart">Carrello ({{ cart.length }}) - {{ totalCart | currency: "EUR" }}</button>
-    <button class="empty" (click)="emptyCart.emit(cart)">Svuota carrello</button>
-  </div>
-</div>
+<ngb-accordion #a="ngbAccordion" [animation]="false">
+  <ngb-panel >
+    <ng-template ngbPanelHeader>
+      <div class="d-flex align-items-center justify-content-between">
+        <h5 class="m-0 display-4" >Develhope</h5>
+        <div>
+          <button ngbPanelToggle class="btn btn-lg btn-outline-primary ml-2">Carrello ({{ cart.length }}) - {{ totalCart | currency: "EUR" }}</button>    <!-- To Fix -->
+          <button type="button" class="btn btn-lg btn-outline-danger ml-2"  (click)="emptyCart.emit(cart)">Svuota carrello</button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <div *ngFor="let product of products">
+        <app-shop-cart [product]="product"></app-shop-cart>
+      </div>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

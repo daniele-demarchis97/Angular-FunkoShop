@@ -1,16 +1,6 @@
 .detail-container {
   border: 2px solid black;
   box-shadow: 3px 3px 3px gray;
-  padding: 2rem;
-  .container-info {
-    display: flex;
-    justify-content: flex-start;
-  }
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 4rem;
-  }
   .buy-button {
     background-color: #f6b34e;
     border: #f6b34e;

@@ -41,12 +41,11 @@ export class ShopContainerComponent implements OnInit {
     }
   }
 
-  emptyCart(cart: Product[], products: Product[], productsReset: Product[]): void {      // reset availability
+  emptyCart(cart: Product[], products: Product[]): void {      // reset availability
     cart.splice(0, cart.length);
     products.forEach(el => el.quantityCart = 0);
     products.forEach(el => el.priceCart = 0);
     this.totalCart = 0;
-    /* products = [...productsReset]; */
   }
 
 }
