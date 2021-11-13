@@ -1,6 +1,6 @@
 # Overview
 
-![screenshot](https://i.postimg.cc/2yqpQqFm/screen.png)
+![screenshot](https://i.postimg.cc/xd4VcyMg/sc.png)
 
 # Angular-Shop
 
