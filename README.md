@@ -1,3 +1,7 @@
+# Overview
+
+![screenshot](https://i.postimg.cc/2yqpQqFm/screen.png)
+
 # Angular-Shop
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
