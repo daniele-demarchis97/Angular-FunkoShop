@@ -14,8 +14,6 @@ export class ShopContainerComponent implements OnInit {
   hide = true;
   cart: Product[] = [];
   totalCart: number = 0;
-  productsReset = PRODUCTS;
-  productReset!: Product;
 
   constructor() { }
 
@@ -45,6 +43,9 @@ export class ShopContainerComponent implements OnInit {
     cart.splice(0, cart.length);
     products.forEach(el => el.quantityCart = 0);
     products.forEach(el => el.priceCart = 0);
+    this.products[0].availability = 43;
+    this.products[1].availability = 23;
+    this.products[2].availability = 3;
     this.totalCart = 0;
   }
 

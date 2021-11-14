@@ -1,6 +1,6 @@
-<ngbd-app-nav-bar [cart]="cart" [totalCart]="totalCart" (emptyCart)="emptyCart($event, products)"
+<app-nav-bar [cart]="cart" [totalCart]="totalCart" (emptyCart)="emptyCart($event, products)"
   [products]="products">
-</ngbd-app-nav-bar>
+</app-nav-bar>
 <div class="d-flex justify-content-between mt-5">
   <div>
     <app-shop-list [products]="products" (selectProduct)="selectProduct($event)"></app-shop-list>

@@ -1,18 +1,27 @@
-<ngb-accordion #a="ngbAccordion" [animation]="false">
+<ngb-accordion >
   <ngb-panel >
     <ng-template ngbPanelHeader>
       <div class="d-flex align-items-center justify-content-between">
         <h5 class="m-0 display-4" >Develhope</h5>
         <div>
-          <button ngbPanelToggle class="btn btn-lg btn-outline-primary ml-2">Carrello ({{ cart.length }}) - {{ totalCart | currency: "EUR" }}</button>    <!-- To Fix -->
-          <button type="button" class="btn btn-lg btn-outline-danger ml-2"  (click)="emptyCart.emit(cart)">Svuota carrello</button>
+          <!-- ngbPanelToggle was not working properly with interpolation inside so i created a span and the total inside the panel content  -->
+          <button ngbPanelToggle class="btn btn-lg btn-outline-primary ml-2 position-relative mx-3">Carrello
+            <span class="position-absolute badge rounded-pill bg-danger text-white">{{ cart.length }}</span>
+          </button>
+          <!-- ngbPanelToggle is used to close the cart, but also when pressed it act like the cart button -->
+          <button ngbPanelToggle type="button" class="btn btn-lg btn-outline-danger ml-2"  (click)="emptyCart.emit(cart)">Svuota carrello</button>
         </div>
       </div>
     </ng-template>
     <ng-template ngbPanelContent>
-      <div *ngFor="let product of products">
+      <div *ngFor="let product of products" >
         <app-shop-cart [product]="product"></app-shop-cart>
+      </div>
+      <div *ngIf="totalCart > 0" class="d-flex justify-content-end m-2">
+        <p class="m-2"><strong>Totale: </strong>{{ totalCart | currency: "EUR" }}</p>
       </div>
     </ng-template>
   </ngb-panel>
 </ngb-accordion>
+
+

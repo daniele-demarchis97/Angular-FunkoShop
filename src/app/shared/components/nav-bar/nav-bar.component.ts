@@ -2,23 +2,18 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Product } from '../../models/Product';
 
 @Component({
-  selector: 'ngbd-app-nav-bar',
+  selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styles: [`
-  .card.disabled {
-    opacity: 0.5;
-  }
-`]
+  styleUrls: ['./nav-bar.component.scss']
 })
-export class NgbdNavBarComponent implements OnInit {
-
-  disabled = false;
+export class NavBarComponent implements OnInit {
 
   @Input() products!: Product[];
   @Input() cart!: Product[];
   @Input() totalCart!: number;
   @Input() productReset!: Product;
   @Output() emptyCart = new EventEmitter<Product[]>();
+  collapse: boolean = false;
 
   constructor() { }
 
